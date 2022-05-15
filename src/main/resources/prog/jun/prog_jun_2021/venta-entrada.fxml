@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog.jun.prog_jun_2021.VentaEntradasController">
+   <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+      <children>
+          <Text layoutX="416.0" layoutY="85.0" text="Venta de entradas" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Italic" size="48.0" />
+            </font>
+         </Text>
+         <Label layoutX="42.0" layoutY="230.0" text="CLIENTES">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="clientsCB" layoutX="143.0" layoutY="224.0" prefHeight="39.0" prefWidth="384.0" />
+         <Text fx:id="clientsError" fill="RED" layoutX="143.0" layoutY="287.0" wrappingWidth="384.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font></Text>
+         <Label layoutX="575.0" layoutY="230.0" text="FECHA ENTRADA">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="dateField" layoutX="733.0" layoutY="224.0" prefHeight="39.0" prefWidth="414.0" />
+         <Text fx:id="dateError" fill="RED" layoutX="733.0" layoutY="286.0" wrappingWidth="414.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+         <Label layoutX="516.0" layoutY="410.0" text="OBRA">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="playsCB" layoutX="647.0" layoutY="404.0" prefHeight="39.0" prefWidth="150.0" />
+         <Text fx:id="playsError" fill="RED" layoutX="647.0" layoutY="466.0" wrappingWidth="414.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+         <Label layoutX="500.0" layoutY="515.0" text="PRECIO">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <TextField fx:id="priceField" layoutX="610.0" layoutY="509.0" prefHeight="39.0" prefWidth="247.0" />
+         <Text fx:id="priceError" fill="RED" layoutX="610.0" layoutY="575.0" wrappingWidth="414.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+         <Button layoutX="517.0" layoutY="641.0" mnemonicParsing="false" onAction="#sellTicket" prefHeight="54.0" prefWidth="186.0" text="GRABACIÓN ENTRADA" />
+      </children>
+      <padding>
+         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+      </padding>
+   </AnchorPane>
+</AnchorPane>

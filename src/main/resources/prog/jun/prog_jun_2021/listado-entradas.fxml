@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog.jun.prog_jun_2021.ListadoEntradasController">
+    <AnchorPane layoutX="7.0" layoutY="3.0" prefHeight="800.0" prefWidth="1200.0">
+        <children>
+            <Text layoutX="333.0" layoutY="88.0" text="Listado de entradas vendidas" textAlignment="CENTER">
+                <font>
+                    <Font name="Arial Italic" size="48.0" />
+                </font>
+            </Text>
+            <Label layoutX="144.0" layoutY="149.0" text="FECHA INICIAL">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <DatePicker fx:id="startDateField" layoutX="68.0" layoutY="192.0" prefHeight="39.0" prefWidth="278.0" />
+            <Text fx:id="startDateError" fill="RED" layoutX="68.0" layoutY="252.0" wrappingWidth="278.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font></Text>
+         <Label layoutX="885.0" layoutY="149.0" text="FECHA FINAL">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="endDateField" layoutX="802.0" layoutY="192.0" prefHeight="39.0" prefWidth="278.0" />
+         <Text fx:id="endDateError" fill="RED" layoutX="803.0" layoutY="251.0" wrappingWidth="278.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+            <Label layoutX="575.0" layoutY="149.0" text="OBRA">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <ComboBox fx:id="playsCB" layoutX="461.0" layoutY="192.0" prefHeight="39.0" prefWidth="278.0" />
+         <Text fx:id="playsError" fill="RED" layoutX="461.0" layoutY="251.0" wrappingWidth="278.0">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+            <Button layoutX="507.0" layoutY="661.0" mnemonicParsing="false" onAction="#loadData" prefHeight="54.0" prefWidth="186.0" text="CARGAR DATOS" />
+         <TableView fx:id="dataTable" layoutX="68.0" layoutY="272.0" prefHeight="354.0" prefWidth="1014.0">
+           <columns>
+                <TableColumn fx:id="nif" prefWidth="75.0" text="NIF" />
+                <TableColumn fx:id="name" prefWidth="343.0" text="NOMBRE" />
+               <TableColumn fx:id="surname" minWidth="0.0" prefWidth="338.0" text="APELLIDOS" />
+               <TableColumn fx:id="date" prefWidth="156.0" text="FECHA" />
+               <TableColumn fx:id="price" minWidth="8.0" prefWidth="100.0" text="PRECIO" />
+           </columns>
+         </TableView>
+        </children>
+        <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+        </padding>
+    </AnchorPane>
+</AnchorPane>
